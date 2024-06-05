@@ -1,0 +1,23 @@
+/*@param font-size, text color, font-weight */
+@mixin text($font-size: $default_font_size, $color:$black, $font-weight: $light)
+{
+    font-family: "Epilogue", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: $font-size;
+    color: $color;
+    font-weight: $font-weight;
+    &-medium{
+        font-weight: $medium;
+    }
+}
+
+@mixin link($opacity: 0.7)
+{
+    opacity: $opacity;
+    text-decoration: underline;
+    &:hover
+    {
+        opacity: 1;
+    }
+}
